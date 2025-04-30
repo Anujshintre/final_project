@@ -1,0 +1,29 @@
+@charset "UTF-8";
+.mainback{
+    height: 80vh;
+    width: 100%;
+    background-image: url("../images/background.jpg");
+    background-repeat: no-repeat;
+   background-size: 100% 100%;
+}
+
+
+.loginf {
+	border:0px;
+    --bs-bg-opacity: 1;
+    background-color: rgb(255 255 255 / 6%) !important;
+}
+.admin{
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(50, 50, 50, 0.5), rgba(101, 101, 101, 0.5)), url('../images/famer.jpeg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+.login{
+    height: 100%;
+    background-image: url(../images/loginbg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
