@@ -1,8 +1,29 @@
-version: '3'
+version: '3.8'
+
 services:
   app:
     build: .
     ports:
       - "8080:8080"
     environment:
-      - SPRING_PROFILES_ACTIVE=prod
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_NAME: farmkart
+      DB_USER: root
+      DB_PASSWORD: 123456
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: farmkart
+    # ports:
+    #   - "3306:3306"  <-- REMOVE or comment this out
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:
